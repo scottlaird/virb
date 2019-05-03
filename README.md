@@ -10,4 +10,4 @@ It also includes a `virb` command-line tool that is mostly useful for testing
 the library, although it can be used to start and stop recording on command.
 
 
-This is not an official Google project.
+This is not an officially supported Google product.
