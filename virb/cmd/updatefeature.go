@@ -21,8 +21,8 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/spf13/cobra"
 	"github.com/scottlaird/virb"
+	"github.com/spf13/cobra"
 )
 
 // updatefeatureCmd represents the updatefeature command

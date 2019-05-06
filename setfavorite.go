@@ -28,7 +28,7 @@ type SetFavoriteResponse struct {
 func SetFavorite(host string) (*SetFavoriteResponse, error) {
 	var resp SetFavoriteResponse
 	var req SetFavoriteRequest
-	req.Command="setFavorite"
+	req.Command = "setFavorite"
 
 	err := fetch(host, req, &resp)
 	if err != nil {

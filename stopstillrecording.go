@@ -28,7 +28,7 @@ type StopStillRecordingResponse struct {
 func StopStillRecording(host string) (*StopStillRecordingResponse, error) {
 	var resp StopStillRecordingResponse
 	var req StopStillRecordingRequest
-	req.Command="stopStillRecording"
+	req.Command = "stopStillRecording"
 
 	err := fetch(host, req, &resp)
 	if err != nil {

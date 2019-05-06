@@ -23,22 +23,22 @@ type FeaturesRequest struct {
 }
 type FeaturesResponse struct {
 	Features []Features_Object
-	Result int
+	Result   int
 }
 
 type Features_Object struct {
-	Enabled int
-	Feature string
-	Options []string
+	Enabled         int
+	Feature         string
+	Options         []string
 	OptionSummaries []string
-	Type int
-	Value string
+	Type            int
+	Value           string
 }
 
 func Features(host string) (*FeaturesResponse, error) {
 	var resp FeaturesResponse
 	var req FeaturesRequest
-	req.Command="features"
+	req.Command = "features"
 
 	err := fetch(host, req, &resp)
 	if err != nil {

@@ -21,15 +21,15 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/spf13/cobra"
 	"github.com/scottlaird/virb"
+	"github.com/spf13/cobra"
 )
 
 // mediadirlistCmd represents the mediadirlist command
 var mediadirlistCmd = &cobra.Command{
 	Use:   "mediadirlist",
 	Short: "List all directories on the camera that contain media",
-	Long: `mediadirlist`,
+	Long:  `mediadirlist`,
 	Run: func(cmd *cobra.Command, args []string) {
 		resp, err := virb.MediaDirList(hostname)
 		if err != nil {

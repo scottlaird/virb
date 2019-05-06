@@ -28,7 +28,7 @@ type LocateResponse struct {
 func Locate(host string) (*LocateResponse, error) {
 	var resp LocateResponse
 	var req LocateRequest
-	req.Command="locate"
+	req.Command = "locate"
 
 	err := fetch(host, req, &resp)
 	if err != nil {

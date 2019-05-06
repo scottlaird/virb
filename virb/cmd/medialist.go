@@ -21,15 +21,15 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/spf13/cobra"
 	"github.com/scottlaird/virb"
+	"github.com/spf13/cobra"
 )
 
 // medialistCmd represents the medialist command
 var medialistCmd = &cobra.Command{
 	Use:   "medialist",
 	Short: "List all media on the camera",
-	Long: `medialist [<directory>]`,
+	Long:  `medialist [<directory>]`,
 	Run: func(cmd *cobra.Command, args []string) {
 		dir := ""
 		if len(args) > 0 {

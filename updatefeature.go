@@ -21,26 +21,26 @@ package virb
 type UpdateFeatureRequest struct {
 	Command string `json:"command"`
 	Feature string `json:"feature"`
-	Value string `json:"value"`
+	Value   string `json:"value"`
 }
 type UpdateFeatureResponse struct {
 	Features []UpdateFeatures_Object
-	Result int
+	Result   int
 }
 
 type UpdateFeatures_Object struct {
-	Enabled int
-	Feature string
-	Options []string
+	Enabled         int
+	Feature         string
+	Options         []string
 	OptionSummaries []string
-	Type int
-	Value string
+	Type            int
+	Value           string
 }
 
 func UpdateFeature(host string, feature string, value string) (*UpdateFeatureResponse, error) {
 	var resp UpdateFeatureResponse
 	var req UpdateFeatureRequest
-	req.Command="updateFeature"
+	req.Command = "updateFeature"
 	req.Feature = feature
 	req.Value = value
 

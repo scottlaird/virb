@@ -29,7 +29,7 @@ type FoundResponse struct {
 func Found(host string) (*FoundResponse, error) {
 	var resp FoundResponse
 	var req FoundRequest
-	req.Command="found"
+	req.Command = "found"
 
 	err := fetch(host, req, &resp)
 	if err != nil {

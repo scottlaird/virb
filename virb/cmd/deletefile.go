@@ -21,15 +21,15 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/spf13/cobra"
 	"github.com/scottlaird/virb"
+	"github.com/spf13/cobra"
 )
 
 // deletefileCmd represents the deletefile command
 var deletefileCmd = &cobra.Command{
 	Use:   "deletefile",
 	Short: "Delete an individual file",
-	Long: `deletefile <filename>...`,
+	Long:  `deletefile <filename>...`,
 	Run: func(cmd *cobra.Command, args []string) {
 		resp, err := virb.DeleteFile(hostname, args)
 		if err != nil {

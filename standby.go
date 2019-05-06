@@ -28,7 +28,7 @@ type StandbyResponse struct {
 func Standby(host string) (*StandbyResponse, error) {
 	var resp StandbyResponse
 	var req StandbyRequest
-	req.Command="standby"
+	req.Command = "standby"
 
 	err := fetch(host, req, &resp)
 	if err != nil {

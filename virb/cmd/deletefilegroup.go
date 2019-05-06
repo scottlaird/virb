@@ -21,15 +21,15 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/spf13/cobra"
 	"github.com/scottlaird/virb"
+	"github.com/spf13/cobra"
 )
 
 // deletefilegroupCmd represents the deletefilegroup command
 var deletefilegroupCmd = &cobra.Command{
 	Use:   "deletefilegroup",
 	Short: "Delete a video file and all of its associated metadata",
-	Long: `deletefilegroup <filename>...`,
+	Long:  `deletefilegroup <filename>...`,
 	Run: func(cmd *cobra.Command, args []string) {
 		resp, err := virb.DeleteFileGroup(hostname, args)
 		if err != nil {

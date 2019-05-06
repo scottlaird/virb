@@ -21,15 +21,15 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/spf13/cobra"
 	"github.com/scottlaird/virb"
+	"github.com/spf13/cobra"
 )
 
 // startrecordingCmd represents the startrecording command
 var startrecordingCmd = &cobra.Command{
 	Use:   "startrecording",
 	Short: "Start recording video with the camera",
-	Long: `startrecording`,
+	Long:  `startrecording`,
 	Run: func(cmd *cobra.Command, args []string) {
 		resp, err := virb.StartRecording(hostname)
 		if err != nil {

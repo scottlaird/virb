@@ -20,34 +20,34 @@ package virb
 
 type MediaListRequest struct {
 	Command string `json:"command"`
-	Path string `json:"path,omitempty"`
+	Path    string `json:"path,omitempty"`
 }
 type MediaListResponse struct {
-	Media []MediaList_MediaObject
+	Media  []MediaList_MediaObject
 	Result int
 }
 type MediaList_MediaObject struct {
-	Date int64
-	Duration float64
-	Fav string
-	FileSize int64
-	FitURL string
-	GroupID int
-	Index int
-	LensMode string
+	Date            int64
+	Duration        float64
+	Fav             string
+	FileSize        int64
+	FitURL          string
+	GroupID         int
+	Index           int
+	LensMode        string
 	LowResVideoPath string
-	Name string
-	ThumbURL string
-	Type string
-	Url string
+	Name            string
+	ThumbURL        string
+	Type            string
+	Url             string
 }
 
 // Status sends a Status command request to the camera and returns a StatusResponse if successful.
 func MediaList(host string, path string) (*MediaListResponse, error) {
 	var resp MediaListResponse
 	var req MediaListRequest
-	req.Command="mediaList"
-	if len(path)>0 {
+	req.Command = "mediaList"
+	if len(path) > 0 {
 		req.Path = path
 	}
 
@@ -57,4 +57,3 @@ func MediaList(host string, path string) (*MediaListResponse, error) {
 	}
 	return &resp, nil
 }
-

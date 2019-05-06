@@ -28,7 +28,7 @@ type RestoreDefaultsResponse struct {
 func RestoreDefaults(host string) (*RestoreDefaultsResponse, error) {
 	var resp RestoreDefaultsResponse
 	var req RestoreDefaultsRequest
-	req.Command="restoreDefaults"
+	req.Command = "restoreDefaults"
 
 	err := fetch(host, req, &resp)
 	if err != nil {

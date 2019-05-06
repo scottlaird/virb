@@ -21,15 +21,15 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/spf13/cobra"
 	"github.com/scottlaird/virb"
+	"github.com/spf13/cobra"
 )
 
 // sensorsCmd represents the sensors command
 var sensorsCmd = &cobra.Command{
 	Use:   "sensors",
 	Short: "List all sensors on the camera",
-	Long: `sensors [<sensorname>]`,
+	Long:  `sensors [<sensorname>]`,
 	Run: func(cmd *cobra.Command, args []string) {
 		resp, err := virb.Sensors(hostname, args)
 		if err != nil {

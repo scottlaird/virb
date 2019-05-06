@@ -19,11 +19,11 @@
 package virb
 
 import (
-	"fmt"
-	"net/http"
-	"io/ioutil"
 	"bytes"
 	"encoding/json"
+	"fmt"
+	"io/ioutil"
+	"net/http"
 )
 
 // Fetch talks to the camera over the network.  It takes a
@@ -54,5 +54,3 @@ func fetch(host string, req interface{}, resp interface{}) error {
 	}
 	return nil
 }
-
-

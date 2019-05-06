@@ -28,7 +28,7 @@ type GetErrorLogURLResponse struct {
 func GetErrorLogURL(host string) (*GetErrorLogURLResponse, error) {
 	var resp GetErrorLogURLResponse
 	var req GetErrorLogURLRequest
-	req.Command="getErrorLogURL"
+	req.Command = "getErrorLogURL"
 
 	err := fetch(host, req, &resp)
 	if err != nil {

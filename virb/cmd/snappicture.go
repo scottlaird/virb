@@ -21,15 +21,15 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/spf13/cobra"
 	"github.com/scottlaird/virb"
+	"github.com/spf13/cobra"
 )
 
 // snappictureCmd represents the snappicture command
 var snappictureCmd = &cobra.Command{
 	Use:   "snappicture",
 	Short: "Snap a picture with the camera",
-	Long: `snappicture`,
+	Long:  `snappicture`,
 	Run: func(cmd *cobra.Command, args []string) {
 		resp, err := virb.SnapPicture(hostname)
 		if err != nil {

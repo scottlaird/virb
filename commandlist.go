@@ -20,11 +20,11 @@ package virb
 
 type CommandListRequest struct {
 	Command string `json:"command"`
-	Path string `json:"path,omitempty"`
+	Path    string `json:"path,omitempty"`
 }
 type CommandListResponse struct {
 	CommandList []CommandList_CommandObject
-	Result int
+	Result      int
 }
 type CommandList_CommandObject struct {
 	Command string
@@ -37,7 +37,7 @@ type CommandList_CommandObject struct {
 func CommandList(host string) (*CommandListResponse, error) {
 	var resp CommandListResponse
 	var req CommandListRequest
-	req.Command="commandList"
+	req.Command = "commandList"
 
 	err := fetch(host, req, &resp)
 	if err != nil {
@@ -45,4 +45,3 @@ func CommandList(host string) (*CommandListResponse, error) {
 	}
 	return &resp, nil
 }
-

@@ -19,8 +19,8 @@
 package virb
 
 type DeleteFileGroupRequest struct {
-	Command string `json:"command"`
-	Files []string `json:"files"`
+	Command string   `json:"command"`
+	Files   []string `json:"files"`
 }
 type DeleteFileGroupResponse struct {
 	Result int
@@ -31,7 +31,7 @@ type DeleteFileGroupResponse struct {
 func DeleteFileGroup(host string, files []string) (*DeleteFileGroupResponse, error) {
 	var resp DeleteFileGroupResponse
 	var req DeleteFileGroupRequest
-	req.Command="deleteFileGroup"
+	req.Command = "deleteFileGroup"
 	req.Files = files
 
 	err := fetch(host, req, &resp)

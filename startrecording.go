@@ -28,7 +28,7 @@ type StartRecordingResponse struct {
 func StartRecording(host string) (*StartRecordingResponse, error) {
 	var resp StartRecordingResponse
 	var req StartRecordingRequest
-	req.Command="startRecording"
+	req.Command = "startRecording"
 
 	err := fetch(host, req, &resp)
 	if err != nil {

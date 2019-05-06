@@ -19,20 +19,20 @@
 package virb
 
 type LivePreviewRequest struct {
-	Command string `json:"command"`
-	StreamType string `json:"streamType"`  // Required, "rtp".
+	Command               string `json:"command"`
+	StreamType            string `json:"streamType"` // Required, "rtp".
 	MaxResolutionVertical string `json:"maxResolutionVertical,omitempty"`
-	LiveStreamActive string `json:"liveStreamActive,omitempty"`
+	LiveStreamActive      string `json:"liveStreamActive,omitempty"`
 }
 type LivePreviewResponse struct {
-	Url string
+	Url    string
 	Result int
 }
 
 func LivePreview(host string, streamType string, maxResolution int, active string) (*LivePreviewResponse, error) {
 	var resp LivePreviewResponse
 	var req LivePreviewRequest
-	req.Command="livePreview"
+	req.Command = "livePreview"
 	req.StreamType = streamType
 	if maxResolution > 0 {
 		req.MaxResolutionVertical = string(maxResolution)

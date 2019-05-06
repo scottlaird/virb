@@ -22,21 +22,21 @@ type SnapPictureRequest struct {
 	Command string `json:"command"`
 }
 type SnapPictureResponse struct {
-	Media SnapPicture_Media
+	Media  SnapPicture_Media
 	Result int
 }
 
 type SnapPicture_Media struct {
-	Name string
+	Name     string
 	ThumbUrl string
-	Type string
-	Url string
+	Type     string
+	Url      string
 }
 
 func SnapPicture(host string) (*SnapPictureResponse, error) {
 	var resp SnapPictureResponse
 	var req SnapPictureRequest
-	req.Command="snapPicture"
+	req.Command = "snapPicture"
 
 	err := fetch(host, req, &resp)
 	if err != nil {

@@ -22,36 +22,37 @@ type StatusRequest struct {
 	Command string `json:"command"`
 }
 type StatusResponse struct {
-	ApiMin int
-	ApiMax int
-	BatteryLevel float64
-	BatteryChargingState int
-	TotalSpace int64
-	AvailableSpace int64
-	GpsAccuracy int
-	GpsLatitude float64
-	GpsLongitude float64
-	Altitude float64
-	Speed float64
-	AntSensor int
-	BtSensor int
-	BtHeadset int
-	WifiSensor int
+	ApiMin                 int
+	ApiMax                 int
+	BatteryLevel           float64
+	BatteryChargingState   int
+	TotalSpace             int64
+	AvailableSpace         int64
+	GpsAccuracy            int
+	GpsLatitude            float64
+	GpsLongitude           float64
+	Altitude               float64
+	Speed                  float64
+	AntSensor              int
+	BtSensor               int
+	BtHeadset              int
+	WifiSensor             int
 	RecordingTimeRemaining int
-	PhotosRemaining int
-	PhotoCount int
-	RecordingTime int
-	WifiSignalStrength int
-	WifiMode string
-	State string
-	LastMediaEventTime int
-	Result int
+	PhotosRemaining        int
+	PhotoCount             int
+	RecordingTime          int
+	WifiSignalStrength     int
+	WifiMode               string
+	State                  string
+	LastMediaEventTime     int
+	Result                 int
 }
+
 // Status sends a Status command request to the camera and returns a StatusResponse if successful.
 func Status(host string) (*StatusResponse, error) {
 	var resp StatusResponse
 	var req StatusRequest
-	req.Command="status"
+	req.Command = "status"
 
 	err := fetch(host, req, &resp)
 	if err != nil {
@@ -59,4 +60,3 @@ func Status(host string) (*StatusResponse, error) {
 	}
 	return &resp, nil
 }
-

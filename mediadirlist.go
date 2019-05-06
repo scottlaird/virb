@@ -23,7 +23,7 @@ type MediaDirListRequest struct {
 }
 type MediaDirListResponse struct {
 	MediaDirs []MediaDirs_Object
-	Result int
+	Result    int
 }
 
 type MediaDirs_Object struct {
@@ -35,7 +35,7 @@ type MediaDirs_Object struct {
 func MediaDirList(host string) (*MediaDirListResponse, error) {
 	var resp MediaDirListResponse
 	var req MediaDirListRequest
-	req.Command="mediaDirList"
+	req.Command = "mediaDirList"
 
 	err := fetch(host, req, &resp)
 	if err != nil {

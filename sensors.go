@@ -19,27 +19,27 @@
 package virb
 
 type SensorsRequest struct {
-	Command string `json:"command"`
-	Names []string `json:"names,omitempty"`
+	Command string   `json:"command"`
+	Names   []string `json:"names,omitempty"`
 }
 type SensorsResponse struct {
 	Sensors []Sensors_Object
-	Result int
+	Result  int
 }
 
 type Sensors_Object struct {
-	Data string  // Provided example is "0.731707"
+	Data     string // Provided example is "0.731707"
 	DataType string // "double" or "int"
-	HasData int
-	Name string
-	Type string
-	Units string
+	HasData  int
+	Name     string
+	Type     string
+	Units    string
 }
 
 func Sensors(host string, sensors []string) (*SensorsResponse, error) {
 	var resp SensorsResponse
 	var req SensorsRequest
-	req.Command="sensors"
+	req.Command = "sensors"
 	req.Names = sensors
 
 	err := fetch(host, req, &resp)
