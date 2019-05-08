@@ -48,7 +48,9 @@ func main() {
 ```
 
 See <https://scottstuff.net/posts/2019/05/07/virb/> for another
-example or two.
+example or two.  The entire
+[`virb/cmd`](https://github.com/scottlaird/virb/tree/master/virb/cmd)
+directory in Github is basically just a giant example as well.
 
 ### Installing
 
