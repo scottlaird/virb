@@ -54,13 +54,8 @@ directory in Github is basically just a giant example as well.
 
 ### Installing
 
-With Go 1.12 (or possibly 1.11 with the new module system turned on),
-simply importing `github.com/scottlaird/virb` is all that is needed;
-go will automatically download and install this library and all of its
-dependencies.
-
-To install the command-line tool, make sure that you have Go 1.12
-installed and run
+To install the command-line tool, make sure that you have a recent
+version of Go installed and run
 
 ```
    $ go get github.com/scottlaird/virb/virb
